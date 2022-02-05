@@ -1,6 +1,11 @@
+import { ContainerStyle } from './App.style';
+import Main from './pages/main/Main';
+
 function App() {
   return (
-    <h1>Training-shop</h1>
+    <ContainerStyle>
+      <Main />
+    </ContainerStyle>
   );
 }
 
