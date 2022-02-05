@@ -4,13 +4,10 @@
   "private": true,
   "homepage": "https://alekseyvy.github.io/training-shop",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.4.0",
     "@types/node": "^17.0.14",
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.11",
+    "normalize.css": "^8.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
@@ -22,12 +19,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "lint": "eslint src/**/* --fix",
+    "lint:css": "stylelint src/**/*.ts",
     "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {
@@ -43,6 +40,7 @@
     ]
   },
   "devDependencies": {
+    "@types/styled-components": "^5.1.21",
     "@typescript-eslint/eslint-plugin": "^5.10.2",
     "@typescript-eslint/parser": "^5.10.2",
     "eslint": "^8.8.0",
@@ -52,6 +50,10 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "husky": "^7.0.4"
+    "husky": "^7.0.4",
+    "stylelint": "^14.3.0",
+    "stylelint-config-recommended": "^6.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0"
   }
 }
