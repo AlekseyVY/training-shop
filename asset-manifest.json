@@ -1,20 +1,24 @@
 {
   "files": {
-    "main.css": "/training-shop/static/css/main.bf628ff0.css",
-    "main.js": "/training-shop/static/js/main.4f317602.js",
+    "main.css": "/training-shop/static/css/main.3e8564d3.css",
+    "main.js": "/training-shop/static/js/main.c1833a09.js",
     "static/media/instagram_1.svg": "/training-shop/static/media/instagram_1.66145f60871b3635624db21febbe8ec2.svg",
+    "static/media/globe_1.svg": "/training-shop/static/media/globe_1.afab6c089df5bad8489c353cb9672c4d.svg",
     "static/media/logo-pinterest_1.svg": "/training-shop/static/media/logo-pinterest_1.55ea26e1115586cb3f99670925a7db81.svg",
     "static/media/location-marker_1.svg": "/training-shop/static/media/location-marker_1.b2365903a62e1e8529c2bfa9b189d60a.svg",
     "static/media/logo-twitter_1.svg": "/training-shop/static/media/logo-twitter_1.c5d740a778cadbfb3ad840f882d6c2b5.svg",
     "static/media/phone_1.svg": "/training-shop/static/media/phone_1.a507e85c70370395b3094c4f8e7153f0.svg",
     "static/media/clock_1.svg": "/training-shop/static/media/clock_1.a3ad6aa3a1aac4c2aaf5dabec23da58e.svg",
+    "static/media/user_1.svg": "/training-shop/static/media/user_1.25b7e5b83c41cae3900270790c9a24f8.svg",
+    "static/media/search_1.svg": "/training-shop/static/media/search_1.ffc3b1dc00a36d398f4e11af51bfb6ff.svg",
     "static/media/facebook_1.svg": "/training-shop/static/media/facebook_1.c890757598ca113b21e37d64aa742ca7.svg",
     "index.html": "/training-shop/index.html",
-    "main.bf628ff0.css.map": "/training-shop/static/css/main.bf628ff0.css.map",
-    "main.4f317602.js.map": "/training-shop/static/js/main.4f317602.js.map"
+    "static/media/shopping-bag_2.svg": "/training-shop/static/media/shopping-bag_2.cddc071bd5dc6b49753aabb593ec8cec.svg",
+    "main.3e8564d3.css.map": "/training-shop/static/css/main.3e8564d3.css.map",
+    "main.c1833a09.js.map": "/training-shop/static/js/main.c1833a09.js.map"
   },
   "entrypoints": [
-    "static/css/main.bf628ff0.css",
-    "static/js/main.4f317602.js"
+    "static/css/main.3e8564d3.css",
+    "static/js/main.c1833a09.js"
   ]
 }
