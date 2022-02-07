@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
 import {
   ActionElementStyle,
   ActionMenuContainerStyle,
@@ -20,10 +22,11 @@ import { ReactComponent as SearchSvg } from '../../assets/svg/search_1.svg';
 import { ReactComponent as GlobeSvg } from '../../assets/svg/globe_1.svg';
 import { ReactComponent as UserSvg } from '../../assets/svg/user_1.svg';
 import { ReactComponent as CartSvg } from '../../assets/svg/shopping-bag_2.svg';
+import { NAV } from '../../constants/NAV';
 
 function Header() {
   return (
-    <HeaderStyle>
+    <HeaderStyle className="header" data-test-id="header">
       <TopBarStyle>
         <TopBarContainerStyle>
           <LeftElementsContainerStyle>
@@ -64,15 +67,17 @@ function Header() {
       </TopBarStyle>
       <BottomBarContainerStyle>
         <BottomInnerContainerStyle>
-          <LogoStyle>CleverShop</LogoStyle>
-          <NavContainerStyle>
-            <LinkStyle>About Us</LinkStyle>
-            <LinkStyle>Women</LinkStyle>
-            <LinkStyle>Men</LinkStyle>
-            <LinkStyle>Beauty</LinkStyle>
-            <LinkStyle>Accessories</LinkStyle>
-            <LinkStyle>Blog</LinkStyle>
-            <LinkStyle>Contact</LinkStyle>
+          <Link to="/" className="header-nav-logo" data-test-id="header-logo-link">
+            <LogoStyle>CleverShop</LogoStyle>
+          </Link>
+          <NavContainerStyle className="menu" data-test-id="menu">
+            {NAV.map((ele) => (
+              <Link key={uuidv4()} to={`/${ele.link}`} className="menu-item" data-test-id={`menu-link-${ele.link}`}>
+                <LinkStyle>
+                  {ele.name}
+                </LinkStyle>
+              </Link>
+            ))}
           </NavContainerStyle>
           <ActionMenuContainerStyle>
             <ActionElementStyle>

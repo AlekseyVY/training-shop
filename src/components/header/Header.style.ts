@@ -77,7 +77,7 @@ export const RightElementsContainerStyle = styled.div`
 export const BottomBarContainerStyle = styled.div`
   width: 100%;
   height: 66px;
-  border-bottom: 1px solid ${grWhite};
+  border-bottom: 2px solid ${grWhite};
 `;
 
 export const BottomInnerContainerStyle = styled.div`
