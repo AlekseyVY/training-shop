@@ -1,36 +1,64 @@
-import { ContainerStyle, TitleContainerStyle, TitleWrapperStyle } from './CategoryCard.style';
-
-interface ICategoryCard {
-  width: number;
-  height: number;
-  background: string;
-  title: string;
-  banner: string | null;
-}
+import {
+  BannerStyle,
+  ContainerStyle, PromoStyle, PromoWrapperStyle,
+  TitleContainerStyle, TitleContainerWithBannerStyle,
+  TitleWrapperStyle,
+  TitleWrapperWithBannerStyle,
+} from './CategoryCard.style';
+import { ICategoryCard } from '../../types/mainPage';
 
 function CategoryCard({
-  width, height, background, title, banner,
+  width, height, background, title, banner, promo, titleSize = 14,
 }: ICategoryCard) {
+  if (promo) {
+    return (
+      <ContainerStyle width={width} height={height} background={background} titleSize={titleSize}>
+        { banner
+          ? (
+            <TitleContainerWithBannerStyle>
+              <BannerStyle>
+                { banner }
+              </BannerStyle>
+              <PromoWrapperStyle>
+                <TitleWrapperWithBannerStyle>
+                  { title }
+                </TitleWrapperWithBannerStyle>
+                <PromoStyle>
+                  { promo }
+                </PromoStyle>
+              </PromoWrapperStyle>
+            </TitleContainerWithBannerStyle>
+          )
+          : (
+            <TitleContainerStyle>
+              <TitleWrapperStyle>
+                { title }
+              </TitleWrapperStyle>
+            </TitleContainerStyle>
+          ) }
+      </ContainerStyle>
+    );
+  }
   return (
-    <ContainerStyle width={width} height={height} background={background}>
-      {banner
+    <ContainerStyle width={width} height={height} background={background} titleSize={titleSize}>
+      { banner
         ? (
-          <TitleContainerStyle>
-            <p>
-              {banner}
-            </p>
-            <TitleWrapperStyle>
-              {title}
-            </TitleWrapperStyle>
-          </TitleContainerStyle>
+          <TitleContainerWithBannerStyle>
+            <BannerStyle>
+              { banner }
+            </BannerStyle>
+            <TitleWrapperWithBannerStyle>
+              { title }
+            </TitleWrapperWithBannerStyle>
+          </TitleContainerWithBannerStyle>
         )
         : (
           <TitleContainerStyle>
             <TitleWrapperStyle>
-              {title}
+              { title }
             </TitleWrapperStyle>
           </TitleContainerStyle>
-        )}
+        ) }
     </ContainerStyle>
   );
 }
