@@ -9,6 +9,7 @@ import { PROMO_DATA } from '../../data/middlePromo';
 import { PromoContainerStyle } from './Main.style';
 import SubscribePromo from '../../components/subscribePromo/SubscribePromo';
 import BlogGroup from '../../components/blogGroup/BlogGroup';
+import Footer from '../../components/footer/Footer';
 
 function Main() {
   return (
@@ -34,6 +35,7 @@ function Main() {
       </PromoContainerStyle>
       <SubscribePromo />
       <BlogGroup />
+      <Footer />
     </>
   );
 }

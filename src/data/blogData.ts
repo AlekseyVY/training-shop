@@ -10,13 +10,13 @@ export const BLOG_DATA = [
     text: 'But I must explain to you how all this mistaken idea of denouncing pleas and praising pain was bor',
   },
   {
-    id: '1',
+    id: '2',
     img: blog2,
     title: 'Wedding Season',
     text: 'But I must explain to you how all this mistaken idea of denouncing pleas and praising pain was bor',
   },
   {
-    id: '1',
+    id: '3',
     img: blog3,
     title: 'Recent Favorites On Repeat',
     text: 'But I must explain to you how all this mistaken idea of denouncing pleas and praising pain was bor',

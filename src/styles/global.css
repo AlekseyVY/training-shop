@@ -1,3 +1,7 @@
+html {
+  font-family: Spartan, serif;
+}
+
 p, h1, h3, h4 {
   margin: 0;
   padding: 0;
