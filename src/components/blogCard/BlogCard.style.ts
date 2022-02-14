@@ -12,7 +12,7 @@ export const InnerContainerStyle = styled.div`
   position: absolute;
   width: 302px;
   height: 122px;
-  bottom: 0;
+  bottom: -60px;
   left: 50%; /* Position X halfway in */
   transform: translate(-50%,-50%);
   display: flex;
