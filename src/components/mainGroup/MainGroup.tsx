@@ -7,10 +7,17 @@ import {
   TitleStyle,
 } from './MainGroup.style';
 import ProductCard from '../productCard/ProductCard';
-import { IMainGroupProps } from '../../types/mainPage';
+import { IMainGroupProps, IProduct } from '../../types/mainPage';
+import { useAppDispatch } from '../../hooks/state';
+import { addItem } from '../../store/reducers/cartReducer';
 
 function MainGroup({ title, products }: IMainGroupProps) {
   const DATA = ['new arrivals', 'specials', 'bestsellers', 'most viewed', 'featured products'];
+  const dispatch = useAppDispatch();
+  const clickHandler = (ele: IProduct) => {
+    console.log(ele);
+    dispatch(addItem(ele));
+  };
   return (
     <ContainerStyle>
       <HeaderContainerStyle>
@@ -29,7 +36,13 @@ function MainGroup({ title, products }: IMainGroupProps) {
       </HeaderContainerStyle>
       <ProductCardsContainerStyle>
         {products.map((ele) => (
-          <div key={ele.id}>
+          <div
+            onClick={() => clickHandler(ele)}
+            onKeyPress={() => clickHandler(ele)}
+            role="button"
+            tabIndex={0}
+            key={ele.id}
+          >
             <ProductCard
               img={ele.img}
               title={ele.title}

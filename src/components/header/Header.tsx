@@ -89,12 +89,18 @@ function Header() {
             <ActionElementStyle>
               <UserSvg />
             </ActionElementStyle>
-            <ActionElementStyle>
-              <CartSvg />
-              <CircleStyle>
-                <p>2</p>
-              </CircleStyle>
-            </ActionElementStyle>
+
+            <Link to="/cart" className="menu-item" data-test-id="menu-link-cart">
+              <LinkStyle>
+                <ActionElementStyle>
+                  <CartSvg />
+                  <CircleStyle>
+                    <p>2</p>
+                  </CircleStyle>
+                </ActionElementStyle>
+              </LinkStyle>
+            </Link>
+
           </ActionMenuContainerStyle>
         </BottomInnerContainerStyle>
       </BottomBarContainerStyle>

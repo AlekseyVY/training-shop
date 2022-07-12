@@ -12,6 +12,7 @@ function ProductCard({
   img, title, price, rating, discount,
 }: IProduct) {
   const calculatedPrice = Number(price) - ((Number(discount) / 100) * Number(price));
+
   return (
     <ContainerStyle>
       <ImageStyle src={img} alt={title} />

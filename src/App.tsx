@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { ContainerStyle } from './App.style';
+import { Cart } from './components/cart/cart';
 import Main from './pages/main/Main';
 import NotFound from './pages/notFound/NotFound';
 
@@ -15,6 +16,7 @@ function App() {
         <Route path="/accessories" element={<NotFound />} />
         <Route path="/blog" element={<NotFound />} />
         <Route path="/contact" element={<NotFound />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </ContainerStyle>
   );
